@@ -1,0 +1,24 @@
+<h1>Project</h1>
+
+<%= form_for [:admin, @project] do |f| %>
+  <% if @project.errors.any? %>
+    <ul>
+      <% @project.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :slug %>
+    <%= f.text_field :slug %>
+  </p>
+  <p>
+    <%= f.label :body %>
+    <%= f.text_area :body, :cols => 80 %>
+  </p>
+  <%= f.submit "Create" %>
+<% end %>

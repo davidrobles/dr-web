@@ -1,0 +1,7 @@
+<h1>Project#show</h1>
+
+<p><%= link_to "Edit", edit_admin_project_path(@project) %></p>
+
+<p>Title: <%= @project.title %></p>
+<p>Slug: <%= @project.slug %></p>
+<p>Content: <%= sanitize @project.body %></p>

@@ -1,0 +1,164 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+body {
+    margin: 0;
+    background-color: #424242;
+    font-size: 14px;
+    font-family: Helvetica;
+    color: #2a2b2d;
+}
+
+h1 {
+    color: #ff4901;
+    font-size: 1.6em;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+a {
+  color: #ff4901;
+  text-decoration: none;
+}
+
+div#wrapper {
+    background-color: #f6f6f0;
+    margin: 0 auto;
+    padding: 30px;
+    width: 940px;
+}
+
+div#header {
+    margin-bottom: 60px;
+    width: 940px;
+}
+
+div#header .title {
+    float: left;
+    font-size: 2.6em;
+    margin-bottom: 10px;
+}
+
+div#header .slogan {
+    float: left;
+    font-size: 1.2em;
+}
+
+div#content {
+    float: left;
+    width: 650px;
+    border-right: 1px dotted black;
+    padding-right: 20px;
+    margin-bottom: 20px;
+    min-height: 400px;
+}
+
+div#content p {
+    text-align: justify;
+}
+
+div#sidebar {
+    width: 240px;
+    float: right;
+}
+
+div#widget {
+    clear: both;
+    margin-bottom: 40px;
+}
+
+div#widget h4 {
+    margin: 0;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted black;
+    text-transform: uppercase;
+}
+
+div#widget p {
+    font-size: 0.9em;
+}
+
+div#widget img {
+    border: 1px solid #424242;
+    /* background: #fff; */
+    padding: 2px;
+}
+
+div#footer {
+    font-size: 0.9em;
+    text-align: center;
+    clear: both;
+}
+
+div.post {
+    margin-bottom: 20px;
+}
+
+div.post p {
+    line-height: 1.4em;
+}
+
+div.post h1 {
+    margin-top: 10px;
+}
+
+div.post h1 a {
+    margin-top: 10px;
+    color: #ff4901;
+    text-decoration: none;
+}
+
+div.post div.date {
+    text-transform: uppercase;
+    font-size: 0.85em;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+pre {
+    overflow:auto;
+}
+
+ul#nav {
+    float:right;
+}
+
+ul#nav li {
+    font-size: 1.5em;
+    display: inline;
+    margin-left: 20px;
+}
+
+ul#nav li a {
+    color: #424242;
+    text-decoration: none;
+}
+
+ul#nav li.current a {
+    color: #2f2f2f;
+}
+
+ul#nav li a:hover {
+    color: #f00;
+}
+
+/* pre{background:#111;color:#f0f0f0;width:556px;padding:10px;overflow:auto;line-height:1.1em;clear:both} */
+
+/* code{font-family:"Menlo","Monaco","Consolas","Bitstream Vera Sans Mono","Courier New",Courier,monospace !important;font-size:0.9em} */
+/* pre code a{color:#fff;font-weight:normal;border:none} */
+/* pre code a:hover{border:inherit;color:#fff} */
