@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <% if @posts.empty? %>
   <div class="notice">No posts.</div>
 <% else %>
@@ -10,3 +11,16 @@
   <% end %>
   <%= paginate @posts %>
 <% end %>
+=======
+
+<% @posts.each do |post| %>
+  <div class="post">
+    <div class="date"><%= post.created_at.strftime('%A, %B %e, %Y') %></div>
+    <h1><%= link_to post.title, post_path(post) %></h1>
+    <%= sanitize post.body %>
+  </div>
+<% end %>
+
+<%= paginate @posts %>
+
+>>>>>>> d4e7abf61da14b37d62f9daca9acbf16cc60b69d

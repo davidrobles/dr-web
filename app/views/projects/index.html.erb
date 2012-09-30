@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <% if @projects.empty? %>
   <div class="notice">No projects.</div>
 <% else %>
@@ -8,3 +9,12 @@
   </ul>
   <%= paginate @posts %>
 <% end %>
+=======
+<h1>Projects</h1>
+
+<ul>
+<% @projects.each do |project| %>
+  <li><%= link_to project.title, project_path(project) %></li>
+<% end %>
+</ul>
+>>>>>>> d4e7abf61da14b37d62f9daca9acbf16cc60b69d
