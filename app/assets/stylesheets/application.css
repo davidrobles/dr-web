@@ -157,7 +157,6 @@ ul#nav li a:hover {
     color: #f00;
 }
 
-<<<<<<< HEAD
 div.notice {
   display: block;
   border: 1px solid;
@@ -165,8 +164,6 @@ div.notice {
   background-color: #ffff99;
 }
 
-=======
->>>>>>> d4e7abf61da14b37d62f9daca9acbf16cc60b69d
 /* pre{background:#111;color:#f0f0f0;width:556px;padding:10px;overflow:auto;line-height:1.1em;clear:both} */
 
 /* code{font-family:"Menlo","Monaco","Consolas","Bitstream Vera Sans Mono","Courier New",Courier,monospace !important;font-size:0.9em} */
