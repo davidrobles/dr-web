@@ -140,10 +140,10 @@ ul#nav {
 
 ul#nav li {
   letter-spacing: 0.2em;
-    font-size: 1.1em;
-    display: inline;
-    margin-left: 20px;
-    text-transform: uppercase;
+  font-size: 1.1em;
+  display: inline;
+  margin-left: 30px;
+  text-transform: uppercase;
 }
 
 ul#nav li a {
