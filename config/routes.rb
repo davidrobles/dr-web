@@ -5,6 +5,7 @@ DRWeb::Application.routes.draw do
   match 'about' => 'pages#about'
   match 'contact' => 'pages#contact'
   match '/admin', to: 'admin/posts#index'
+  match "feeds/posts(.:format)" => "feeds#posts"
 
   resources :posts, :only => [:index, :show]
   resources :projects, :only => [:index, :show]
