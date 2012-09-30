@@ -1,0 +1,12 @@
+<% if @posts.empty? %>
+  <div class="notice">No posts.</div>
+<% else %>
+  <% @posts.each do |post| %>
+    <div class="post">
+      <div class="date"><%= post.created_at.strftime('%A, %B %e, %Y') %></div>
+      <h1><%= link_to post.title, post_path(post) %></h1>
+      <%= raw post.body %>
+    </div>
+  <% end %>
+  <%= paginate @posts %>
+<% end %>

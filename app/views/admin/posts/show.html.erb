@@ -1,0 +1,8 @@
+<h1>Post#show</h1>
+
+<p><%= link_to "Edit", edit_admin_post_path(@post) %></p>
+
+<p>Title: <%= @post.title %></p>
+<p>Slug: <%= @post.slug %></p>
+<p>Content: <%= sanitize @post.body %></p>
+

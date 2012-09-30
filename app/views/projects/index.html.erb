@@ -1,0 +1,10 @@
+<% if @projects.empty? %>
+  <div class="notice">No projects.</div>
+<% else %>
+  <ul>
+  <% @projects.each do |project| %>
+    <li><%= link_to project.title, project_path(project) %></li>
+  <% end %>
+  </ul>
+  <%= paginate @posts %>
+<% end %>

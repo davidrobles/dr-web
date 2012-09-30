@@ -1,0 +1,4 @@
+== Personal website
+
+Just a Ruby on Rails application of my personal website.
+
