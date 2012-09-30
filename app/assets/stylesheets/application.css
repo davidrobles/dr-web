@@ -77,27 +77,27 @@ div#sidebar {
     float: right;
 }
 
-div#widget {
+div.widget {
     clear: both;
     margin-bottom: 40px;
 }
 
-div#widget h4 {
+div.widget h4 {
     margin: 0;
     padding-bottom: 5px;
     border-bottom: 1px dotted black;
     text-transform: uppercase;
 }
 
-div#widget p {
+div.widget p {
     font-size: 0.9em;
 }
 
-div#widget img {
-    border: 1px solid #424242;
+/* div.widget img { */
+/*     border: 1px solid #424242; */
     /* background: #fff; */
-    padding: 2px;
-}
+    /* padding: 2px; */
+/* } */
 
 div#footer {
     font-size: 0.9em;
