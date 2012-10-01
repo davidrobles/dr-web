@@ -12,12 +12,11 @@
     <div id="wrapper">
       <div id="header">
         <div class="title">David Robles</div>
-        <!-- <div class="slogan">Personal Blog</div> -->
         <ul id="nav">
-          <li><%= link_to 'Blog', root_path %></li>
-          <li><%= link_to 'Projects', projects_path %></li>
-          <li><%= link_to 'About', about_path %></li>
-          <li><%= link_to 'Contact', contact_path %></li>
+          <li<%= raw ' class="current"' if params[:controller] == 'posts' %>><%= link_to 'Blog', root_path %></li>
+          <li<%= raw ' class="current"' if params[:controller] == 'projects' %>><%= link_to 'Projects', projects_path %></li>
+          <li<%= raw ' class="current"' if params[:action] == 'about' %>><%= link_to 'About', about_path %></li>
+          <li<%= raw ' class="current"' if params[:action] == 'contact' %>><%= link_to 'Contact', contact_path %></li>
         </ul>
       </div>
 
@@ -30,7 +29,7 @@
           <%= link_to image_tag('rss.png'), 'http://dr-website.herokuapp.com/feeds/posts.rss' %>
           <%= link_to image_tag('linkedin.png'), 'http://www.linkedin.com/in/drobles' %>
           <%= link_to image_tag('twitter.png'), 'http://www.twitter.com/davidrobles' %>
-          <%= link_to image_tag('facebook.png'), 'http://www.facebook.com/davidrobles', style: 'width: 50%' %>
+          <%= link_to image_tag('facebook.png'), 'http://www.facebook.com/davidrobles' %>
         </div>
         <div class="widget">
           <h4>About Me</h4>
