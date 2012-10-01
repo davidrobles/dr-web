@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DRWeb</title>
+    <title>
+      <% if content_for?(:title) %>
+        <%= yield(:title) %>
+      <% else %>
+        David Robles
+      <% end %>
+    </title>
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <link rel="stylesheet" type="text/css" href="https://dl.dropbox.com/u/577985/prettify/prettify.css" />
     <%= javascript_include_tag "application" %>
@@ -27,10 +33,10 @@
 
       <div id="sidebar">
         <div class="widget">
-          <%= link_to image_tag('rss.png'), 'http://dr-website.herokuapp.com/feeds/posts.rss' %>
-          <%= link_to image_tag('linkedin.png'), 'http://www.linkedin.com/in/drobles' %>
-          <%= link_to image_tag('twitter.png'), 'http://www.twitter.com/davidrobles' %>
-          <%= link_to image_tag('facebook.png'), 'http://www.facebook.com/davidrobles' %>
+          <%= link_to image_tag('rss.png', style: "width: 25px"), 'http://dr-website.herokuapp.com/feeds/posts.rss' %>
+          <%= link_to image_tag('linkedin.png', style: "width: 25px"), 'http://www.linkedin.com/in/drobles' %>
+          <%= link_to image_tag('twitter.png', style: "width: 25px"), 'http://www.twitter.com/davidrobles' %>
+          <%= link_to image_tag('facebook.png', style: "width: 25px"), 'http://www.facebook.com/davidrobles' %>
         </div>
         <div class="widget">
           <h4>About Me</h4>
