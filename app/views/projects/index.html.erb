@@ -1,10 +1,14 @@
 <% if @projects.empty? %>
   <div class="notice">No projects.</div>
 <% else %>
-  <ul>
-  <% @projects.each do |project| %>
-    <li><%= link_to project.title, project_path(project) %></li>
+  <% @projects.each_with_index do |project, index| %>
+    <div class="project">
+      <%= image_tag "http://envylabs.com/images/work/img-codeschool.jpg",
+          class: index.even? ? 'left' : 'right', style: 'width: 250px;' %>
+      <h2>Project</h2>
+      <p><%= raw project.body %></p>
+      <br style="clear: both;" />
+    </div>
   <% end %>
-  </ul>
   <%= paginate @projects %>
 <% end %>

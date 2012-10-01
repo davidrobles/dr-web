@@ -166,6 +166,28 @@ div.notice {
   background-color: #ffff99;
 }
 
+div.project {
+  margin-bottom: 40px;
+}
+
+div.project h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #686666;
+  letter-spacing: 0.2em;
+  font-size: 1.1em;
+}
+
+div.project img.left {
+  float: left;
+  margin-right: 20px;
+}
+
+div.project img.right {
+  float: right;
+  margin-left: 20px;
+}
+
 /* pre{background:#111;color:#f0f0f0;width:556px;padding:10px;overflow:auto;line-height:1.1em;clear:both} */
 
 /* code{font-family:"Menlo","Monaco","Consolas","Bitstream Vera Sans Mono","Courier New",Courier,monospace !important;font-size:0.9em} */
