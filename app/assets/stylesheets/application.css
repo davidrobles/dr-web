@@ -90,7 +90,18 @@ div.widget h4 {
 }
 
 div.widget p {
+  font-size: 0.8em;
+}
+
+div.widget ul {
+  list-style-type: none;
+  /* margin: 0; */
+  padding: 0;
+}
+
+div.widget ul li {
   font-size: 0.9em;
+  padding: 2px;
 }
 
 /* div.widget img { */
@@ -176,6 +187,15 @@ div.project h2 {
   color: #686666;
   letter-spacing: 0.2em;
   font-size: 1.1em;
+}
+
+div.project img {
+  border: 3px solid #999999;
+  padding: 4px;
+}
+
+div.project a:hover img {
+  background-color: #999999;
 }
 
 div.project img.left {

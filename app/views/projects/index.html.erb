@@ -3,8 +3,7 @@
 <% else %>
   <% @projects.each_with_index do |project, index| %>
     <div class="project">
-      <%= image_tag "http://envylabs.com/images/work/img-codeschool.jpg",
-          class: index.even? ? 'left' : 'right', style: 'width: 250px;' %>
+      <%= link_to image_tag("http://envylabs.com/images/work/img-codeschool.jpg", class: index.even? ? 'left' : 'right', style: 'width: 250px;'), "#"  %>
       <h2>Project</h2>
       <p><%= raw project.body %></p>
       <br style="clear: both;" />
