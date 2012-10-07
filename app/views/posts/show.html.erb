@@ -16,7 +16,14 @@
       </div>
       <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5068d369145d1091"></script>
       <!-- AddThis Button END -->
-  <%= sanitize @post.body %>
+      <%= raw @post.body %>
+      <% if @post.tags.any? %>
+        <p class="tags">Tags: 
+        <% @post.tags.each_with_index do |tag, ix| %>
+          <%= link_to tag, tag %><%= ',' unless (ix + 1) == @post.tags.count %>
+        <% end %>
+        </p>
+      <% end %>
 </div>
 
 <div id="disqus_thread"></div>

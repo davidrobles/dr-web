@@ -1,25 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 tag1:
-  name: Ruby on Rails
-  slug: ruby-on-rails
-
-tag2:
   name: Ruby
   slug: ruby
 
-tag3:
+tag2:
   name: Python
   slug: python
 
-tag4:
+tag3:
   name: Clojure
   slug: clojure
 
-tag5:
+tag4:
   name: Test Driven Development
   slug: tdd
 
-tag6:
+tag5:
   name: Scala
   slug: scala
