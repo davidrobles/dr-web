@@ -9,4 +9,7 @@ class PagesController < ApplicationController
   def home
   end
 
+  def publications
+  end
+
 end
