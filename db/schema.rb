@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(:version => 20121006212919) do
     t.datetime "updated_at", :null => false
   end
 
+  add_index "tags", ["name"], :name => "index_tags_on_name"
   add_index "tags", ["slug"], :name => "index_tags_on_slug"
 
 end
