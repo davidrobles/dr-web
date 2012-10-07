@@ -96,14 +96,16 @@ div.widget p {
 }
 
 div.widget ul {
-  list-style-type: none;
+  list-style-type: circle;
   /* margin: 0; */
-  padding: 0;
+  margin-left: -20px;
+  /* padding: 0; */
 }
 
 div.widget ul li {
   font-size: 0.9em;
-  padding: 2px;
+  /* padding: 2px; */
+  /* margin-left: 0px; */
 }
 
 /* div.widget img { */
