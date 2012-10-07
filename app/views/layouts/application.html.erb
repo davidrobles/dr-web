@@ -55,23 +55,23 @@
           <div style="clear: both;"></div>
         </div>
 
-        <!-- RECENT POSTS -->
+        <!-- LATEST POSTS -->
 
         <div class="widget">
-          <h4>Recent posts</h4>
-          <% recent_posts = Post.published.order('created_at DESC').last(10) %>
-          <% if recent_posts.empty? %>
+          <h4>Latest posts</h4>
+          <% latest_posts = Post.published.order('created_at DESC').last(10) %>
+          <% if latest_posts.empty? %>
             <div class="notice">No posts.</div>
           <% else %>
             <ul>
-            <% recent_posts.each do |post| %>
+            <% latest_posts.each do |post| %>
               <li><%= link_to post.title, post %></li>
             <% end %>
             </ul>
           <% end %>
         </div>
 
-        <!-- RECENT TAGS -->
+        <!-- TAGS -->
 
         <div class="widget">
           <h4>Tags</h4>
