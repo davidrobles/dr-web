@@ -9,10 +9,13 @@ DRWeb::Application.routes.draw do
 
   resources :posts, :only => [:index, :show]
   resources :projects, :only => [:index, :show]
+  resources :tags, :only => [:show]
 
   namespace :admin do
-    resources :posts, :projects
+    resources :posts, :projects, :tags
   end
+
+  match 'blog/:id' => 'posts#show', :as => :post
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

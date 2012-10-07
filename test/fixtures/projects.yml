@@ -2,7 +2,7 @@
 
 <% (1..50).each do |i| %>
 project<%= i %>:
-  title: Project Title <%= i %>
+  name: Project Name <%= i %>
   slug: slug-<%= i %>
   body: This is the content of the post. I don't know what else to say bye!
 <% end %>

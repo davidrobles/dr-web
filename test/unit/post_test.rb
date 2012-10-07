@@ -31,6 +31,24 @@ class PostTest < ActiveSupport::TestCase
     assert !@post.save
   end
 
+  test "should not save post with invalid slug" do
+    invalid_slugs = ['dd', 'this is wrong', 'This-is-wrong', 'this-is wrong']
+    invalid_slugs.each do |slug|
+      @post.slug = slug
+      assert @post.invalid?, slug
+      assert !@post.save
+    end
+  end
+
+  test "should save post with valid slug" do
+    slugs = ['min', 'this-is-a-valid-slug', '111', 'this-88-is-valid']
+    slugs.each do |slug|
+      @post.slug = slug
+      assert @post.valid?, slug
+      assert @post.save
+    end
+  end
+
   test "should not save post without body" do
     @post.body = ""
     assert @post.invalid?

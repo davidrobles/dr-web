@@ -4,8 +4,10 @@ class CreatePosts < ActiveRecord::Migration
       t.string :title
       t.string :slug
       t.text :body
+      # t.boolean :draft
 
       t.timestamps
     end
+    add_index :posts, :slug
   end
 end

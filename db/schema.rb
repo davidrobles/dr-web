@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120923191650) do
+ActiveRecord::Schema.define(:version => 20121006212919) do
 
   create_table "posts", :force => true do |t|
     t.string   "title"
@@ -21,12 +21,33 @@ ActiveRecord::Schema.define(:version => 20120923191650) do
     t.datetime "updated_at", :null => false
   end
 
+  add_index "posts", ["slug"], :name => "index_posts_on_slug"
+
   create_table "projects", :force => true do |t|
-    t.string   "title"
+    t.string   "name"
     t.string   "slug"
     t.text     "body"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "taggings", :force => true do |t|
+    t.integer  "tag_id"
+    t.integer  "post_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "taggings", ["post_id"], :name => "index_taggings_on_post_id"
+  add_index "taggings", ["tag_id"], :name => "index_taggings_on_tag_id"
+
+  create_table "tags", :force => true do |t|
+    t.string   "name"
+    t.string   "slug"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "tags", ["slug"], :name => "index_tags_on_slug"
 
 end

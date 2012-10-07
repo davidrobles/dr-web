@@ -17,8 +17,13 @@ class PostsControllerTest < ActionController::TestCase
     assert_select '.post', 6
   end
 
+  test 'title should be correct' do
+    get :show, id: @post.slug
+    assert_select 'title', "#{@post.title} | Blog | David Robles"
+  end
+
   test 'should show post' do
-    get :show, id: @post.id
+    get :show, id: @post.slug
     assert_response :success
     assert_not_nil assigns(:post)
   end

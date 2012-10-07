@@ -7,9 +7,14 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test "should show project" do
-    get :show, :id => @project.id
+    get :show, id: @project.slug
     assert_response :success
     assert_not_nil assigns(:project)
+  end
+
+  test 'title should be correct' do
+    get :show, id: @project.slug
+    assert_select 'title', "#{@project.name} | Projects | David Robles"
   end
 
   test "should get index" do
@@ -17,5 +22,5 @@ class ProjectsControllerTest < ActionController::TestCase
     assert_response :success
     assert_not_nil assigns(:projects)
   end
-  
+
 end
