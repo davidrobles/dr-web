@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Testing</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<nav id="menu">
-  <%= link_to "Home", root_path %>
-  <%= link_to "Posts", admin_posts_path %>
-  <%= link_to "Projects", admin_projects_path %>
-</nav>
-<section id="main">
-  <div style="padding: 20px;">
-    <% flash.each do |key, value| %>
-      <div class="flash <%= key %>"><%= value %></div>
-    <% end %>
-    <%= yield %>
-  </div>
-</section>
-<footer>This is a footer</footer>
-</body>
+  <head>
+    <title>Testing</title>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+
+    <div id="wrapper">
+
+      <div id="header">
+        <ul id="nav">
+          <li><%= link_to "Posts", admin_posts_path %></li>
+          <li><%= link_to "Projects", admin_projects_path %></li>
+          <li><%= link_to "Tags", admin_tags_path %></li>
+        </ul>
+      </div>
+
+      <div style="padding: 20px;">
+        <% flash.each do |key, value| %>
+          <div class="flash <%= key %>"><%= value %></div>
+        <% end %>
+        <%= yield %>
+      </div>
+
+      <div id="footer">
+        David Robles
+      </div>
+
+    </div>
+
+  </body>
 </html>

@@ -1,12 +1,11 @@
 class PostsController < ApplicationController
 
   def index
-    # @posts = Post.paginate page: params[:page], per_page: 20, order: 'created_at DESC'
     @posts  = Post.order('created_at DESC').page(params[:page])
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = Post.find_by_slug(params[:id])
   end
 
 end

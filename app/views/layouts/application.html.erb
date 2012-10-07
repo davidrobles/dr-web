@@ -32,6 +32,9 @@
       </div>
 
       <div id="sidebar">
+
+        <!-- LINKS -->
+
         <div class="widget">
           <%= link_to image_tag('rss.png', style: "width: 25px"), 'http://dr-website.herokuapp.com/feeds/posts.rss' %>
           <%= link_to image_tag('linkedin.png', style: "width: 25px"), 'http://www.linkedin.com/in/drobles' %>
@@ -39,25 +42,52 @@
           <%= link_to image_tag('facebook.png', style: "width: 25px"), 'http://www.facebook.com/davidrobles' %>
           <%= link_to image_tag('github.png', style: "width: 25px"), 'http://www.github.com/drobles' %>
         </div>
+
+        <!-- ABOUT -->
+
         <div class="widget">
           <h4>About Me</h4>
           <p style="float: right;">Ph.D. Student in Computer Science, full stack developer.</p>
-          <img style="float: left; border: 1px solid #424242; padding: 2px;" src="http://www.gravatar.com/avatar/d9b94d4c76a86a818ccf34e7519e9f90?s=100"/>
+          <img style="float: left; border: 1px solid #424242; padding: 2px;"
+               src="http://www.gravatar.com/avatar/d9b94d4c76a86a818ccf34e7519e9f90?s=100"/>
           <div style="clear: both;"></div>
         </div>
+
+        <!-- RECENT POSTS -->
+
+        <div class="widget">
+          <h4>Recent posts</h4>
+          <% recent_posts = Post.order('created_at DESC').last(10) %>
+          <% if recent_posts.empty? %>
+            <div class="notice">No posts.</div>
+          <% else %>
+            <ul>
+            <% Post.order('created_at DESC').last(10).each do |post| %>
+              <li><%= link_to post.title, post %></li>
+            <% end %>
+            </ul>
+          <% end %>
+        </div>
+
+        <!-- RECENT TAGS -->
+
         <div class="widget">
           <h4>Tags</h4>
-          <ul>
-            <li><a href="#">Ruby</a></li>
-            <li><a href="#">Python</a></li>
-            <li><a href="#">Clojure</a></li>
-            <li><a href="#">Big Data</a></li>
-          </ul>
+          <% tags = Tag.order('name') %>
+          <% if tags.empty? %>
+            <div class="notice">No tags.</div>
+          <% else %>
+            <ul>
+              <% tags.each do |tag| %>
+                <li><%= link_to tag, tag %></li>
+              <% end %>
+            </ul>
+          <% end %>
         </div>
       </div>
 
       <div id="footer">
-        David Robles
+
       </div>
 
     </div> <!-- end of wrapper -->

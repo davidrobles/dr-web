@@ -1,3 +1,12 @@
-<% title @project.title, "Projects" %>
-<h1><%= @project.title %></h1>
-<%= raw @project.body %>
+
+<% title @project.name, "Projects" %>
+
+<h1>Project#show</h1>
+
+<p><%= link_to "Edit", edit_admin_project_path(@project) %></p>
+
+<p><strong>Name</strong>: <%= @project.name %></p>
+<p><strong>Slug</strong>: <%= @project.slug %></p>
+<p><strong>Body</strong>: <%= raw @project.body %></p>
+<p><strong>Updated at</strong>: <%= @project.updated_at %></p>
+<p><strong>Created at</strong>: <%= @project.created_at %></p>

@@ -2,6 +2,8 @@
 
 <p><%= link_to "Edit", edit_admin_project_path(@project) %></p>
 
-<p>Title: <%= @project.title %></p>
-<p>Slug: <%= @project.slug %></p>
-<p>Content: <%= sanitize @project.body %></p>
+<p><strong>Name</strong>: <%= @project.name %></p>
+<p><strong>Slug</strong>: <%= @project.slug %></p>
+<p><strong>Content</strong>: <%= sanitize @project.body %></p>
+<p><strong>Updated at</strong>: <%= @project.updated_at %></p>
+<p><strong>Created at</strong>: <%= @project.created_at %></p>

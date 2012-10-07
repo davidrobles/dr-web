@@ -1,0 +1,23 @@
+
+<h1>Edit tag</h2>
+
+<p><%= link_to "Show", admin_tag_path(@tag) %></p>
+
+<%= form_for [:admin, @tag] do |f| %>
+  <% if @tag.errors.any? %>
+    <ul>
+      <% @tag.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :slug %>
+    <%= f.text_field :slug %>
+  </p>
+  <%= f.submit "Update" %>
+<% end %>

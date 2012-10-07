@@ -79,11 +79,11 @@ div#sidebar {
 
 div.widget {
   clear: both;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 div.widget h4 {
-  margin: 0;
+  margin: 0 0 10px 0;
   padding-bottom: 5px;
   border-bottom: 1px dotted #686666;
   text-transform: uppercase;
@@ -122,6 +122,10 @@ div.post {
 
 div.post p {
   line-height: 1.4em;
+}
+
+div.post p.tags {
+  font-size: 0.9em;
 }
 
 div.post h1 {

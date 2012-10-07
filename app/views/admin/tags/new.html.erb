@@ -1,9 +1,9 @@
-<h1>Project</h1>
+<h1>Tag</h1>
 
-<%= form_for [:admin, @project] do |f| %>
-  <% if @project.errors.any? %>
+<%= form_for [:admin, @tag] do |f| %>
+  <% if @tag.errors.any? %>
     <ul>
-      <% @project.errors.full_messages.each do |msg| %>
+      <% @tag.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
     </ul>
@@ -15,10 +15,6 @@
   <p>
     <%= f.label :slug %>
     <%= f.text_field :slug %>
-  </p>
-  <p>
-    <%= f.label :body %>
-    <%= f.text_area :body, :cols => 80 %>
   </p>
   <%= f.submit "Create" %>
 <% end %>

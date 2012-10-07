@@ -10,12 +10,12 @@ class Admin::PostsController < Admin::AdminController
   end
 
   def destroy
-    Post.find(params[:id]).destroy
+    Post.find_by_slug(params[:id]).destroy
     redirect_to admin_posts_path
   end
 
   def edit
-    @post = Post.find(params[:id])
+    @post = Post.find_by_slug(params[:id])
   end
 
   def index
@@ -27,11 +27,11 @@ class Admin::PostsController < Admin::AdminController
   end
   
   def show
-    @post = Post.find(params[:id])
+    @post = Post.find_by_slug(params[:id])
   end
 
   def update
-    @post = Post.find(params[:id])
+    @post = Post.find_by_slug(params[:id])
     if @post.update_attributes(params[:post])
       redirect_to admin_post_path(@post)
     else
