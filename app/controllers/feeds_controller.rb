@@ -1,10 +1,7 @@
 class FeedsController < ApplicationController
 
-  # session :off
-
   def posts
-    @posts = Post.order("updated_at, created_at").limit(15)
-    puts '*' * 100
+    @posts = Post.published.order("updated_at, created_at").limit(10)
   end
 
 end
