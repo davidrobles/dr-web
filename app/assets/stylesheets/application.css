@@ -15,9 +15,11 @@
 body {
   margin: 0;
   background-color: #424242;
+  /* background-color: #f6f6f0; */
   font-size: 14px;
   font-family: Helvetica;
-  color: #2a2b2d;
+  /* color: #2a2b2d; */
+  color: #555555;
 }
 
 h1 {
@@ -61,7 +63,7 @@ div#header .slogan {
 
 div#content {
   float: left;
-  width: 620px;
+  width: 600px;
   /* border-right: 1px dotted #686666; */
   padding-right: 15;
   margin-bottom: 20px;
@@ -75,24 +77,21 @@ div#content p {
 div#sidebar {
   padding-left: 20px;
   /* border-left: 1px dotted #686666; */
-  width: 220px;
+  width: 240px;
   float: right;
 }
 
 div.widget {
   clear: both;
   margin-bottom: 20px;
+  font-size: 0.9em;
 }
 
 div.widget h4 {
   margin: 0 0 10px 0;
-  padding-bottom: 5px;
-  border-bottom: 1px dotted #686666;
+  padding-bottom: 2px;
+  /* border-bottom: 1px dotted #686666; */
   text-transform: uppercase;
-}
-
-div.widget p {
-  font-size: 0.8em;
 }
 
 div.widget ul {
@@ -100,12 +99,6 @@ div.widget ul {
   /* margin: 0; */
   margin-left: -20px;
   /* padding: 0; */
-}
-
-div.widget ul li {
-  font-size: 0.9em;
-  /* padding: 2px; */
-  /* margin-left: 0px; */
 }
 
 /* div.widget img { */

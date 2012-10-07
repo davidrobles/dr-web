@@ -17,10 +17,13 @@ ActiveRecord::Schema.define(:version => 20121006212919) do
     t.string   "title"
     t.string   "slug"
     t.text     "body"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.boolean  "published",  :default => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
   end
 
+  add_index "posts", ["published", "created_at"], :name => "index_posts_on_published_and_created_at"
+  add_index "posts", ["published"], :name => "index_posts_on_published"
   add_index "posts", ["slug"], :name => "index_posts_on_slug"
 
   create_table "projects", :force => true do |t|

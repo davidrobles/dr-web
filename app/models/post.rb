@@ -1,8 +1,10 @@
 class Post < ActiveRecord::Base
 
+  scope :published, where(published: true)
+
   paginates_per 6
 
-  attr_accessible :title, :slug, :body, :tag_list, :created_at
+  attr_accessible :title, :slug, :body, :published, :tag_list, :created_at
 
   has_many :taggings
   has_many :tags, through: :taggings

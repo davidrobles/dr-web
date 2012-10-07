@@ -4,10 +4,12 @@ class CreatePosts < ActiveRecord::Migration
       t.string :title
       t.string :slug
       t.text :body
-      t.boolean :published
+      t.boolean :published, default: false
 
       t.timestamps
     end
     add_index :posts, :slug
+    add_index :posts, :published
+    add_index :posts, [:published, :created_at]
   end
 end

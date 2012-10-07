@@ -47,9 +47,11 @@
 
         <div class="widget">
           <h4>About Me</h4>
-          <p style="float: right;">Ph.D. Student in Computer Science, full stack developer.</p>
-          <img style="float: left; border: 1px solid #424242; padding: 2px;"
-               src="http://www.gravatar.com/avatar/d9b94d4c76a86a818ccf34e7519e9f90?s=100"/>
+          <p>
+          <img style="float: left; border: 1px solid #686666; padding: 0px; margin-right: 8px;"
+               src="http://www.gravatar.com/avatar/d9b94d4c76a86a818ccf34e7519e9f90?s=70"/>
+               Computer Science Ph.D. Student at the University of Essex, full stack developer. Blogging about Artificial Intelligence, Ruby, Clojure and Machine Learning. Computer Science Ph.D. Student at the University of Essex, full stack developer.</p>
+
           <div style="clear: both;"></div>
         </div>
 
@@ -57,12 +59,12 @@
 
         <div class="widget">
           <h4>Recent posts</h4>
-          <% recent_posts = Post.order('created_at DESC').last(10) %>
+          <% recent_posts = Post.published.order('created_at DESC').last(10) %>
           <% if recent_posts.empty? %>
             <div class="notice">No posts.</div>
           <% else %>
             <ul>
-            <% Post.order('created_at DESC').last(10).each do |post| %>
+            <% recent_posts.each do |post| %>
               <li><%= link_to post.title, post %></li>
             <% end %>
             </ul>
