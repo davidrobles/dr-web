@@ -42,12 +42,12 @@ div#wrapper {
   background-color: #f6f6f0;
   margin: 0 auto;
   padding: 20px;
-  width: 860px;
+  width: 910px;
 }
 
 div#header {
   margin-bottom: 65px;
-  width: 860px;
+  width: 910px;
 }
 
 div#header .title {
@@ -63,7 +63,7 @@ div#header .slogan {
 
 div#content {
   float: left;
-  width: 600px;
+  width: 650px;
   /* border-right: 1px dotted #686666; */
   padding-right: 15;
   margin-bottom: 20px;
