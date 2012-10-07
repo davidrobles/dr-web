@@ -16,7 +16,7 @@ DRWeb::Application.routes.draw do
   end
 
   match 'blog/:id' => 'posts#show', :as => :post
-  # match 'blog', :path => 'posts#index', :as => :post
+  # match 'blog' => 'posts#index', :as => :post
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
